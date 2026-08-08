@@ -40,7 +40,8 @@ nav{
 .logo img{
     width:auto;
     height:60px;
-    width:150px;   
+    width:550px;   
+    object-fit: contain;
 }
  /* navigation links */
 
@@ -55,7 +56,6 @@ nav{
 }
 .nav-links a{
     color:#334155;
-
     text-decoration: none;
     font-size:1.1rem;
     font-weight:500;
@@ -64,6 +64,7 @@ nav{
 
 .nav-links a:hover{
     color:#3d4e71;
+    color:rgb(18, 208, 251);
 }
 .nav-links a.active{
     color: #2563eb;
@@ -73,13 +74,14 @@ nav{
     width:130px;
     height: 50px;
     border-radius: 8px;
+    border:none;
     transition: all 0.3s ease;
 }
 .contact-btn a{
     color:#fff;
     text-decoration: none;
     font-size:1rem;
-    font-weight:600;
+    font-weight:500;
     /* transition:all .3s ease; */
 }
 .contact-btn:hover{
