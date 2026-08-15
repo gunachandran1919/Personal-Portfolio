@@ -63,13 +63,21 @@ nav{
 }
 
 .nav-links a:hover{
-    color:#3d4e71;
+    /* color:#3d4e71; */
     color:rgb(18, 208, 251);
 }
 .nav-links a.active{
     color: #2563eb;
 }
+.contact-link{
+    /* background-color: red; */
+    height:100%;
+    width:10vw;
+
+}
 .contact-btn{
+    
+    margin:7px 0 0 0;
     background: rgb(0, 119, 255);
     width:130px;
     height: 50px;
@@ -87,4 +95,76 @@ nav{
 .contact-btn:hover{
     background-color: #1d4edb;
     transform: scale(.98);
+}
+
+/* landing-page */
+
+.landing-page{
+    width:100vw;
+    height:90.75vh;
+    background:rgba(117, 117, 218, 0.03);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+/* .landing-page div{
+    width:50%;
+    height:100%;
+    border:1px solid grey;
+    background-color: green;
+    
+} */
+
+.landing-page-part1{
+    width: 40%;
+    height:70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    /* background-color: red; */
+    /* gap:50px; */
+}
+
+.landing-page-part1 h2, h4, p, button{
+    margin:0 0 15px 0;
+}
+.landing-page-part1 h2{
+    font-size:2em;
+}
+
+
+.landing-page-part1 button{
+    width:120px;
+    height:40px;
+    background-color:rgb(0, 119, 255);
+    border:none;
+    border-radius: 5px;
+    color:#fff;
+
+
+}
+
+.landing-page-part1 button:hover{
+    background-color: #1d4edb;
+    transform: scale(.98);
+}
+
+.landing-page-part2{
+    background-color: rgba(110, 180, 203, 0.402);
+    height:70%;
+    width:30%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50px 50px 0 0;
+}
+
+
+.landing-page-part2 img{
+    width:605px;
+    height:450px;
+    object-fit: contain;
 }
