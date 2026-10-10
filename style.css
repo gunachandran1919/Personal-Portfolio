@@ -159,7 +159,7 @@ main{
     line-height: 1.1em;
 }
 .landing-page-part1 p{
-    font-size:.6em;
+    font-size:.74em;
     font-weight: 500;
     line-height: 1.23em;
     margin:10px 0 15px 0;
@@ -184,7 +184,7 @@ main{
 }
 
 .landing-page-part2{
-    background-color: rgba(110, 180, 203, 0.402);
+    background-color: rgba(110, 180, 203, 0.404);
     height:72%;
     width:29.5%;
     display:flex;
@@ -195,9 +195,10 @@ main{
 
 
 .landing-page-part2 img{
-    width:400px;
-    height:440px;
+    width:350px;
+    height:380px;
     object-fit: cover;
+    border-radius: 30px 10px 0 0;
     /* margin: 5px px 0 0 0; */
 }
 
@@ -567,3 +568,229 @@ form{
     color:#e4e8ed;
     text-decoration: none;
 }
+
+
+/* some changes to make looks better  */
+
+
+/* ===== landing page design ===== */
+.landing-page{
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(0,119,255,0.13), transparent 40%),
+        radial-gradient(circle at 8% 90%, rgba(117,117,218,0.15), transparent 40%),
+        #f4f7fd;
+}
+/* subtle dotted pattern that fades out downward */
+.landing-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(rgba(15,23,42,0.09) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-mask-image:linear-gradient(to bottom,#000,transparent 85%);
+    mask-image:linear-gradient(to bottom,#000,transparent 85%);
+    pointer-events:none;
+}
+.landing-page > *{ position:relative; z-index:1; }
+
+/* photo panel: blue gradient that matches your buttons + offset outline */
+.landing-page-part2{
+    background:linear-gradient(160deg,#dbeafe 0%,#bfdbfe 55%,#93c5fd 100%);
+}
+.landing-page-part2::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    transform:translate(16px,-16px);
+    border:2px solid rgba(0,119,255,0.35);
+    border-radius:50px 50px 0 0;
+    z-index:-1;
+}
+
+.accent{ color:#0077ff; }
+
+/* floating badges */
+.badge{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:0;
+    padding:10px 14px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    font-size:0.9rem;
+    font-weight:600;
+    box-shadow:0 8px 24px rgba(15,23,42,0.12);
+    animation:float 4s ease-in-out infinite;
+}
+.badge svg{ width:18px; height:18px; color:#0077ff; }
+.badge-top{ top:40%; left:-40px; }
+.badge-bottom{ bottom:12%; right:-30px; animation-delay:1.5s; }
+@keyframes float{ 50%{ transform:translateY(-8px); } }
+@media (prefers-reduced-motion:reduce){ .badge{ animation:none; } }
+@media (max-width:768px){
+    .badge-top{ left:-60px; }
+    .badge-bottom{ right:-8px; }
+}
+
+/* ===== subtle professional borders on cards ===== */
+.approach div,
+.skills-child p,
+.services-container-service,
+.contact-container2{
+    border:1px solid #e2e8f0;
+}
+.services-container-service{ border-top:3px solid #0077ff; }
+.approach div:hover,
+.skills-child p:hover,
+.services-container-service:hover{ border-color:#0077ff; }
+
+/* small accent line under section headings */
+/* .about-me-container h2::after,
+.services-page h2::after{
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    margin:10px auto 0;
+    background:#0077ff;
+    border-radius:2px;
+} */
+
+
+
+/* ===== photo panel: light, high contrast ===== */
+/* .landing-page-part2{
+    background:
+        radial-gradient(circle at 50% 38%, #ffffff 0%, rgba(255,255,255,0) 60%),
+        linear-gradient(180deg,#e3efff 0%,#c4dcff 100%);
+    border:1px solid #bcd6fb;
+    border-radius:200px 200px 0 0;
+    box-shadow:0 30px 60px rgba(0,119,255,0.15);
+}
+.landing-page-part2::before{ display:none; }
+
+@media (max-width:768px){
+    .landing-page-part2{ border-radius:150px 150px 0 0; }
+} */
+
+
+
+
+/* responsiveness */
+/* for mobile */
+@media (max-width:768px){
+    /* header: hide the links, keep logo + Contact button */
+    .nav-links{
+        display:none;
+    }
+    nav{
+        padding:0 16px;
+        height:64px;
+    }
+    body{
+        padding-top:64px;
+    }
+    html{
+        scroll-padding-top: 64px;
+     }
+    .contact-link{
+         width: auto;
+     }
+     
+    /* home */
+    .landing-page { flex-direction: column;
+         padding: 40px 6%; 
+         gap: 30px;
+          text-align: center;
+         }
+    .landing-page-part1 { 
+        width: 100%; 
+        height: auto; 
+        align-items: center;
+     }
+    .landing-page-part2 { 
+        width: 80%; 
+        height: auto;
+     }
+    .landing-page-part2 img { 
+        width: 100%;
+         height: auto;
+         }
+
+    /* about */
+    .about-me-page, .services-page, .contact-page { 
+        width: 100%; 
+        height: auto; 
+        padding: 50px 0; 
+    }
+    .about-me-container { 
+        height: auto; 
+        gap: 24px; 
+        justify-content: flex-start; 
+    }
+    .approach { flex-direction: column;
+         height: auto; 
+         gap: 16px;
+         }
+    .approach div { 
+        width: 100%; 
+        height: auto; 
+        padding: 20px; 
+    }
+    .skills-child { 
+        height: auto; 
+    }
+    .skills-child p, .skills-middle p { 
+        width: 48%;
+     }
+    .skills-middle { 
+        justify-content: flex-start;
+     }
+
+    /* services */
+    .services-page { 
+        padding: 50px 6%;
+     }
+    .services-container1, .services-container2 {
+        width: 100%;
+         height: auto;
+         flex-direction: column; 
+         gap: 20px; 
+         margin-bottom: 20px;
+    }
+    .services-container-service {
+         width: 100%; 
+        height: auto;
+     }
+
+    /* contact */
+    .contact-page { 
+        flex-direction: column; 
+        padding: 50px 6%;
+     }
+    .contact-container {
+         width: 100%; 
+        height: auto;
+     }
+    .contact-container1 {
+         padding-top: 0; 
+    }
+    .contact-container2 { 
+        margin-bottom: 0; 
+    }
+
+    /* footer */
+    .footer-section { 
+        height: auto; 
+        padding: 30px 16px; 
+        line-height: 1.6; 
+        text-align: center;
+     }
+}
+
+

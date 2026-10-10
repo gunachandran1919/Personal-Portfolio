@@ -1,0 +1,103 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* Main card */
+.thank-you-card {
+    background: #ffffff;
+    max-width: 550px;
+    width: 100%;
+    padding: 50px 35px;
+    text-align: center;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+/* Success checkmark */
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/* Heading */
+.thank-you-card h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+/* Message */
+.thank-you-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Home button */
+.home-btn {
+    display: inline-block;
+    background: #0f172a;
+    color: #ffffff;
+    text-decoration: none;
+
+    padding: 14px 24px;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: background 0.3s, transform 0.3s;
+}
+
+.home-btn:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .thank-you-card {
+        padding: 40px 22px;
+    }
+}
