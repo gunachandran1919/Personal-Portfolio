@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
 </head>
+
 <body>
     <!-- header -->
     <header>
         <nav>
             <div class="logo">
-                    <img src="img/s3.png" alt="B GUNA CHANDRAN">
+                    <img src="img/7.png" alt="B GUNA CHANDRAN">
 
                 </div>
                 <div class="nav-links" id="nl">
                     <a href="#home">Home</a>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#portfolio" id="ptf">Portfolio</a>
                     <a href="#about">About Me</a>
                     <a href="#services">Services</a>
                 </div>
@@ -40,8 +44,8 @@
                         <br>modern websites.
                     
                     <p>I create clean, responsive, and user-friendly
-websites with a focus on modern design
-and a great user experience</p>
+                        websites with a focus on modern design
+                        and a great user experience</p>
                     <button>Get in Touch</button>
                 </div>
                 <div class="landing-page-part2">
@@ -49,7 +53,7 @@ and a great user experience</p>
                 </div>
 
             </div>
-            <div class="about-me-page">
+            <div class="about-me-page" id="about">
                 <div class="about-me-container">
                 <h2>ABOUT ME</h2>
                 <p>
@@ -67,36 +71,134 @@ and a great user experience</p>
                     <h3>MY APPROACH</h3>
                     <div class="approach">
                         <div class="approach-child1">
-                            <h3>01</h3>
-                            <h4>CLEAN DESIGN</h4>
+                            <h4><i data-lucide="palette"></i> CLEAN DESIGN</h4>
                             <P>Simple, clear and purposeful interfaces.</P>
                         </div>
                         <div class="approach-child2">
-                            <h3>02</h3>
-                            <h4>USER FOCUSED</h4>
+                            <h4><i data-lucide="users-round"></i> USER FOCUSED</h4>
                             <P>Easy to navigate and designed around users.</P>
                         </div>
                         <div class="approach-child3">
-                            <h3>03</h3>
-                            <h4>ALWAYS LEARNING</h4>
+                            <h4><i data-lucide="book-open"></i> ALWAYS LEARNING</h4>
                             <P>Learning through building and practice.</P>
                         </div>
                     </div>
                     <div class="skills">
                         <h3>TECHNOLOGIES & SKILLS</h3>
                         <div class="skills-child">
-                            <p>HTML</p>
-                            <P>CSS</P>
-                            <p>JS</p>
-                            <p>Git&GitHub</p>
-                            <p>Others</p>
+                            <p><i class="devicon-html5-plain colored"></i> HTML</p>
+                            <p><i class="devicon-css3-plain colored"></i> CSS</p>
+                            <p><i class="devicon-javascript-plain colored"></i> JS</p>
+                            <p><i class="devicon-git-plain colored"></i> Git & GitHub</p>
+                            
+                            <div class="skills-middle">
+                               <p><i class="devicon-wordpress-plain colored"></i> WordPress</p>
+                    
+                            </div>
                         </div>
 
                     </div>
             </div>
             </div>
+            <div class="services-page" id="services">
+                <h2>SERVICES</h2>
+                <H3>What I Can Help You Build</H3>
+                <div class="services-container1">
+                    <div class="services-container-service1 services-container-service">
+                        <h4>
+                            <i data-lucide="monitor-smartphone"></i> 
+                            Responsive Website Development
+                        </h4>
+                        <p>I build responsive websites that adapt smoothly to mobile, tablet, and desktop screens, with a focus on clean design, usability, and a consistent experience across devices.</p>
+                    </div>
+                    <div class="services-container-service2 services-container-service">
+                        <h4>
+                            <i data-lucide="panels-top-left"></i>
+                            WordPress Website Development
+                        </h4>
+                        <p>I create and customize WordPress websites that are professional, easy to manage, and suited to personal websites, portfolios, and small businesses.</p>
+                    </div>
+                </div>
+                 <div class="services-container2">
+                    <div class="services-container-service1 services-container-service">
+                        <h4>
+                            <i data-lucide="layout-template"></i> 
+                            Landing Page Development
+                        </h4>
+                        <p>I develop focused landing pages that present your product, service, or personal brand clearly and guide visitors toward taking action.</p>
+                    </div>
+                    <div class="services-container-service2 services-container-service">
+                        <h4>
+                            <i data-lucide="code-2"></i>
+                            Front-End Development
+                        </h4>
+                        <p>I turn designs and ideas into functional web interfaces using HTML, CSS, and JavaScript, with attention to responsiveness, accessibility, and performance.</p>
+                    </div>
+                </div>
+            </div>
+<div class="contact-page" id="contact">
+    <div class="contact-container1 contact-container">
+        <div class="contact-info">
+            <h2>LET'S WORK TOGETHER</h2>
+            <p> Have a project in mind or need a website? 
+            </br>
+                I'd be happy to hear about your ideas. 
+            </br>
+                Let's discuss how I can help. </p>
+            <div class="contact-detail">
+                <i data-lucide="mail"></i>
+                <h4>Email</h4> 
+                <a href="mailto:gunachandran360@gmail.com"> gunachandran360@gmail.com </a>
+            </div>
+        </div>
+    </div>
+    <div class="contact-container2 contact-container">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"> 
+            <input type="hidden" name="form-name" value="contact">
+
+    <!-- Spam protection: hidden from normal visitors -->
+    <p hidden>
+        <label>
+            Leave this field empty:
+            <input name="bot-field" tabindex="-1" autocomplete="off">
+        </label>
+    </p>
+
+          <!-- main content for form -->
+           
+            <h3>Send Me a Message</h3>
+             <p>Tell me a little about your project.</p> 
+             <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required> 
+             <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+               <label for="subject">Subject</label> <input type="text" id="subject" name="subject" placeholder="What is your project about?" required>
+                <label for="message">Your Message</label>
+                 <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required>
+
+                 </textarea>
+                  <button type="submit"> Send Message 
+                    <i data-lucide="arrow-right"></i>
+                 </button>
+
+             </form>
+    </div>
+</div>
         </section>
      </main>
-    
+     <footer>
+        <div class="footer-section">
+             <p>© 2026 B Guna Chandran.</p>
+             <p>All rights reserved.</p>
+             <div>
+                <a href="#">GitHub</a>
+                <!-- <a href="#">LinkedIn</a> -->
+            </div>
+        </div>
+     </footer>
+ <script>
+    lucide.createIcons();
+</script>   
+<script src="script.js"></script>
 </body>
 </html>
