@@ -628,7 +628,7 @@ form{
     animation:float 4s ease-in-out infinite;
 }
 .badge svg{ width:18px; height:18px; color:#0077ff; }
-.badge-top{ top:40%; left:-40px; }
+.badge-top{ top:40%; left:-90px; }
 .badge-bottom{ bottom:12%; right:-30px; animation-delay:1.5s; }
 @keyframes float{ 50%{ transform:translateY(-8px); } }
 @media (prefers-reduced-motion:reduce){ .badge{ animation:none; } }
@@ -682,7 +682,7 @@ form{
 
 
 /* responsiveness */
-/* for mobile */
+
 @media (max-width:768px){
     /* header: hide the links, keep logo + Contact button */
     .nav-links{
@@ -692,6 +692,7 @@ form{
         padding:0 16px;
         height:64px;
     }
+    
     body{
         padding-top:64px;
     }
@@ -719,8 +720,8 @@ form{
      }
     .landing-page-part2 img { 
         width: 100%;
-         height: auto;
-         }
+        height: auto;
+    }
 
     /* about */
     .about-me-page, .services-page, .contact-page { 
@@ -794,3 +795,165 @@ form{
 }
 
 
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav{
+        padding:0 80px 0 0;
+    }
+
+    .nav-links{
+        width:44%;
+    }
+    .contact-btn{
+        margin:4px 0 0 0;
+        /* background: red; */ 
+    }
+    .landing-page-part1 h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .landing-page-part1 p {
+        font-size: 1rem;
+    }
+
+    .landing-page-part2::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    transform:translate(-33px,-16px);
+    border:2px solid rgba(0,119,255,0.35);
+    border-radius:50px 50px 0 0;
+    z-index:-1;
+    width:142%;
+    }
+
+    .services-container,
+    .skills-container {
+        gap: 20px;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+    .badge-top{ 
+        top:40%; left:-110px; 
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px){
+    nav{
+        padding:0 80px 0 0;
+    }
+    .contact-btn{
+        margin:4px 0 0 0;
+        /* background: red; */ 
+    }
+    .landing-page-part2::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        transform:translate(-13px,-16px);
+        border:2px solid rgba(0,119,255,0.35);
+        border-radius:50px 50px 0 0;
+        z-index:-1;
+        width:111%;
+    }
+    
+}
+
+
+/* Phones */
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .landing-page-part1,
+    .landing-page-part2 {
+        width: 100%;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 7px 10px;
+        max-width: 90%;
+        white-space: normal;
+    }
+    .badge-top{ 
+        top:40%; left:-20px; 
+    }
+
+    .services-container,
+    .skills-container {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .service-card,
+    .contact-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        font-size: 0.5rem;
+        padding: 6px 8px;
+        /* width: */
+    }
+    .badge-top{ 
+        top:40%; left:-20px; 
+    }
+
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-me-container p{
+        font-size: .8rem;
+    }
+    .skills-middle p{
+        width:100%;
+    }
+}
+
+.landing-page-part2 {
+    position: relative;
+}
