@@ -7,11 +7,11 @@ contactBtn.addEventListener("click",()=>{
     });
 });
 
-const ptfLink=document.querySelector("#ptf");
+// const ptfLink=document.querySelector("#ptf");
 
-ptfLink.addEventListener("click",()=>{
-    alert("In Progress, Thank You for Your Understanding")
-})
+// ptfLink.addEventListener("click",()=>{
+//     alert("In Progress, Thank You for Your Understanding")
+// })
 
 
 const getInTouchBtn=document.querySelector(".get-in-touch");
